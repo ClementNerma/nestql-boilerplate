@@ -8,6 +8,8 @@ const options: MikroOrmModuleSyncOptions = {
   dbName: process.env['DB_NAME'] ?? 'mango',
   user: process.env['DB_USERNAME'] ?? 'mango',
   password: process.env['DB_PASSWORD'] ?? 'mango',
+  validate: true,
+  strict: true,
 }
 
 export default options
