@@ -1,5 +1,5 @@
-import * as chalk from 'chalk';
-import { matchString, panic, setupTypeScriptCore } from 'typescript-core';
+import * as chalk from 'chalk'
+import { matchString, panic, setupTypeScriptCore } from 'typescript-core'
 
 export function setupEnv(): void {
   setupTypeScriptCore((prev) => ({
@@ -20,7 +20,7 @@ export function setupEnv(): void {
 
         highlighter: (type, content) => {
           if (process.argv.includes('--no-color')) {
-            return content;
+            return content
           }
 
           return matchString(type, {
@@ -44,9 +44,9 @@ export function setupEnv(): void {
             remainingProperties: () => chalk.yellow(content),
             remainingPropertiesWrapper: () => chalk.blue(content),
             _: () => content,
-          });
+          })
         },
       }),
     }),
-  }));
+  }))
 }

@@ -1,5 +1,5 @@
-import { Injectable } from '@nestjs/common';
-import { UserService } from 'src/user/user.service';
+import { Injectable } from '@nestjs/common'
+import { UserService } from 'src/user/user.service'
 
 @Injectable()
 export class MigrationsService {
@@ -12,7 +12,7 @@ export class MigrationsService {
         email: 'admin@internal.zzz',
         username: 'admin',
         plainPassword: 'admin',
-      });
+      })
     }
 
     // Create the guest user (no privilege)
@@ -21,9 +21,9 @@ export class MigrationsService {
         email: 'guest@internal.zzz',
         username: 'guest',
         plainPassword: 'guest',
-      });
+      })
     }
 
-    return true;
+    return true
   }
 }

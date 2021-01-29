@@ -1,7 +1,7 @@
-import { Module } from '@nestjs/common';
-import { GraphQLModule as BaseGraphQLModule } from '@nestjs/graphql';
-import { join } from 'path';
-import { Option, println, Stringifyable } from 'typescript-core';
+import { Module } from '@nestjs/common'
+import { GraphQLModule as BaseGraphQLModule } from '@nestjs/graphql'
+import { join } from 'path'
+import { Option, println, Stringifyable } from 'typescript-core'
 
 @Module({
   imports: [
@@ -31,9 +31,9 @@ import { Option, println, Stringifyable } from 'typescript-core';
             },
             duplicateRefs: new Set(),
           }),
-        );
+        )
 
-        return error;
+        return error
       },
     }),
   ],

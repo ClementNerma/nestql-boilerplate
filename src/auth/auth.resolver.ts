@@ -1,11 +1,11 @@
-import { Inject } from '@nestjs/common';
-import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { AuthenticationError } from 'apollo-server-express';
-import { GqlAuth, ViewerId } from 'src/graphql/auth';
-import { UserLoginDTO } from 'src/user/dtos/user.login.dto';
-import { User } from 'src/user/user.entity';
-import { UserService } from 'src/user/user.service';
-import { AuthService } from './auth.service';
+import { Inject } from '@nestjs/common'
+import { Args, Mutation, Query, Resolver } from '@nestjs/graphql'
+import { AuthenticationError } from 'apollo-server-express'
+import { GqlAuth, ViewerId } from 'src/graphql/auth'
+import { UserLoginDTO } from 'src/user/dtos/user.login.dto'
+import { User } from 'src/user/user.entity'
+import { UserService } from 'src/user/user.service'
+import { AuthService } from './auth.service'
 
 @Resolver()
 export class AuthResolver {
@@ -20,7 +20,7 @@ export class AuthResolver {
   @Query(() => User, { nullable: true })
   @GqlAuth(true)
   async viewer(@ViewerId() viewerId?: string): Promise<User | null> {
-    return viewerId ? this.userService.findOne(viewerId) : null;
+    return viewerId ? this.userService.findOne(viewerId) : null
   }
 
   @Mutation(() => String)
@@ -28,12 +28,12 @@ export class AuthResolver {
     const user = await this.authService.login(
       input.username,
       input.plainPassword,
-    );
+    )
 
     if (!user) {
-      throw new AuthenticationError('Bad credentials provided');
+      throw new AuthenticationError('Bad credentials provided')
     }
 
-    return user;
+    return user
   }
 }
