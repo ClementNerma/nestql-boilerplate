@@ -24,7 +24,7 @@
   "dependencies": {
     "@mikro-orm/core": "^4.3.2",
     "@mikro-orm/nestjs": "^4.2.0",
-    "@mikro-orm/sqlite": "^4.3.2",
+    "@mikro-orm/postgresql": "^4.4.0",
     "@nestjs/common": "^7.5.5",
     "@nestjs/config": "^0.6.1",
     "@nestjs/core": "^7.5.5",
