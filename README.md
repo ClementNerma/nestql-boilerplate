@@ -11,3 +11,32 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository with GraphQL and JWT authentication.  
 First-class integration with [TSCore](https://github.com/ClementNerma/TSCore).
+
+## Instructions
+
+Populate the `.env` file with the following variables:
+
+```dotenv
+# Database
+DB_HOST=...
+DB_NAME=...
+DB_USERNAME=...
+DB_PASSWORD=...
+
+# Authentication
+JWT_SECRET=...
+```
+
+Database is PostgreSQL by default.
+
+Then start the development server:
+
+```shell
+yarn start:dev
+```
+
+Database can be synchronized by MikroORM with:
+
+```shell
+yarn db:sync
+```
