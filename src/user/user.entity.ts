@@ -5,7 +5,7 @@ import { v4 } from 'uuid'
 @Entity()
 @ObjectType()
 export class User {
-  @PrimaryKey()
+  @PrimaryKey({ type: 'string' })
   uuid = v4()
 
   @Property()
