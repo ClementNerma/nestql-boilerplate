@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  uuid: String!
+  email: String!
+  username: String!
+  passwordHash: String!
+  passwordSalt: String!
+}
+
+type Query {
+  viewer: User
+}
+
+type Mutation {
+  login(input: UserLoginDTO!): String!
+  init: Boolean!
+}
+
+input UserLoginDTO {
+  username: String!
+  plainPassword: String!
+}
