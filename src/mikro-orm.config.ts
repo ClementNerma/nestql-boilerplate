@@ -1,4 +1,8 @@
 import { MikroOrmModuleSyncOptions } from '@mikro-orm/nestjs'
+import { config as dotenv } from 'dotenv'
+
+dotenv({ path: '.env' })
+dotenv({ path: '.env.dev' })
 
 const options: MikroOrmModuleSyncOptions = {
   entities: ['./dist/**/*.entity.js'],
