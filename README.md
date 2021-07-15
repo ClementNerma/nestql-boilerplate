@@ -10,7 +10,6 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository with GraphQL and JWT authentication.  
-First-class integration with [TSCore](https://github.com/ClementNerma/TSCore).
 
 ## Instructions
 

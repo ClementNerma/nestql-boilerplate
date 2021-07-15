@@ -2,7 +2,6 @@ import { NestFactory } from '@nestjs/core'
 import { config as dotenv } from 'dotenv'
 import { install as installSourceMap } from 'source-map-support'
 import { AppModule } from './app.module'
-import { setupEnv } from './tscore'
 
 installSourceMap()
 
@@ -14,5 +13,4 @@ async function bootstrap(): Promise<void> {
   await app.listen(3000)
 }
 
-setupEnv()
 bootstrap()
